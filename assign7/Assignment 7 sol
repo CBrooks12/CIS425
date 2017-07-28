@@ -1,0 +1,21 @@
+Chris Brooks
+
+Assignment 7
+Spring 2017
+
+
+1.1:
+
+int: INT
+int -> bool: ARROW(INT,BOOL)
+('a -> 'b) -> ('a -> 'b): ARROW(ARROW(VAR "a", VAR "b"),ARROW(VAR "a", VAR "b"))
+
+1.2:
+
+succ (pred 5): AST_APP (AST_SUCC,AST_APP (AST_PRED,AST_NUM 5))
+if 7 then true else 5:  AST_IF (AST_NUM 7,AST_BOOL true,AST_NUM 5)
+fn a : int => f a a: AST_FUN ("a",INT,AST_APP (AST_ID "f",AST_APP (AST_ID "a",AST_ID "a")))
+
+2.4: If the input had been type checked, then I would not need to check all cases to see if
+the type is valid or not and throw errors accordingly. If it is checked, then I know for a
+fact that what I am getting will not throw errors.
